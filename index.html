@@ -2,6 +2,21 @@
 <html>
     <head>
         <style>
+            #mydiv {
+                position: absolute;
+                z-index: 9;
+                background-color: #f1f1f1;
+                border: 1px solid #d3d3d3;
+                text-align: center;
+            }
+
+            #mydivheader {
+                padding: 10px;
+                cursor: move;
+                z-index: 10;
+                background-color: #272a2ca8;
+                color: #fff;
+            }
             img {
                 border-radius: 20px;
                 border: 2px solid black;
@@ -40,17 +55,23 @@
     <body style="background-image:url(./blue\ skulls.jpg);background-size: cover;">
         <div style="display: flex;justify-content: space-around;color: antiquewhite;
          width:100%; backdrop-filter: blur(10px);
-         background-color: rgba(32, 37, 64, 0.7);">
+         background-color: rgba(32, 37, 64, 0.7);
+         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+         border-radius: 0 0 20px 20px;">
             <p>
                 F1rino1sOS
             </p>
-            <p>
-                6/16/2026 5:03PM
+            <p id="timeElement">
+               time
             </p>
         </div>
-        <div style=" border: thick double blueviolet;width: min(90vw, 760px);
-        border-radius: 16px;padding: 15px;margin: 20px auto;position: relative;
+        <div id="mydiv" ; style="border: thick double blueviolet;width: min(90vw, 760px);
+        border-radius: 16px;padding: 15px;margin: 20px auto;position: absolute;
         background-color: rgb(0, 0,0,0.7);">
+         <div id="mydivheader">
+          click here to move the window
+         </div>
             <h2 style="margin: 30px;color:antiquewhite">WELCOME TO MY OS</h2>
             <h4 style="color: antiquewhite;">PRESENTING MYSELF :</h4>
          <div class="image-row">
@@ -65,6 +86,7 @@
             <img src="747 boeing.jpg"/>
          </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
 
